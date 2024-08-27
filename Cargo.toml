@@ -1,0 +1,10 @@
+[package]
+name = "ogg2caf"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.86"
+byteorder = "1.5.0"
+caf = { git = "https://github.com/hazelmeow/caf.git#d1cd406d56b6cc358188c93f8a65a348a3dc1ce2" }
+ogg = "0.9.1"
