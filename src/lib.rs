@@ -18,8 +18,13 @@ pub fn convert<R: Read + Seek, W: Write>(rdr: R, wtr: W) -> Result<(), Error> {
 
     // parse opus headers into caf audio description
     let opus_head = OpusHead::read(Cursor::new(id_header_packet.data))?;
+    let sample_rate = if opus_head.input_sample_rate == 0 {
+        48000.0
+    } else {
+        opus_head.input_sample_rate as f64
+    };
     let audio_description = AudioDescription {
-        sample_rate: opus_head.input_sample_rate as f64,
+        sample_rate,
         format_id: FormatType::Other(u32::from_be_bytes(*b"opus")),
         format_flags: 0,
         bytes_per_packet: 0,
