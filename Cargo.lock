@@ -17,7 +17,7 @@ checksum = "1fd0f2584146f6f2ef48085050886acf353beff7305ebd1ae69500e27c67f64b"
 [[package]]
 name = "caf"
 version = "0.2.0"
-source = "git+https://github.com/hazelmeow/caf.git#d1cd406d56b6cc358188c93f8a65a348a3dc1ce2#d1cd406d56b6cc358188c93f8a65a348a3dc1ce2"
+source = "git+https://github.com/fractalbeauty/caf.git#d1cd406d56b6cc358188c93f8a65a348a3dc1ce2#d1cd406d56b6cc358188c93f8a65a348a3dc1ce2"
 dependencies = [
  "byteorder",
 ]
